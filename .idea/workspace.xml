@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bc0afe80-fa09-4335-870d-4a17146f4227" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +139,8 @@
       <workItem from="1689873677501" duration="10774000" />
       <workItem from="1689892141253" duration="2541000" />
       <workItem from="1689903578059" duration="3650000" />
-      <workItem from="1689907246653" duration="8172000" />
+      <workItem from="1689907246653" duration="10391000" />
+      <workItem from="1689952439767" duration="7095000" />
     </task>
     <servers />
   </component>
@@ -150,12 +152,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java</url>
-          <line>69</line>
+          <line>72</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java</url>
-          <line>71</line>
+          <line>74</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

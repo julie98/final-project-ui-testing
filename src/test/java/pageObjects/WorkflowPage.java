@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class WorkflowPage extends BasePage{
@@ -36,7 +37,7 @@ public class WorkflowPage extends BasePage{
     @FindBy(xpath = "//input[@id='status-name-field']")
     private WebElement statusName;
 
-    @FindBy(css = "input[value='Add']")
+    @FindBy(xpath = "//input[@name='submit']")
     private WebElement addStatusSubmit;
 
     @FindBy(xpath = "//button[@class='aui-button add-transition']")
@@ -53,6 +54,12 @@ public class WorkflowPage extends BasePage{
 
     @FindBy(xpath = "//input[@class='aui-button aui-button aui-button-primary']")
     private WebElement addTransitionSubmit;
+
+    @FindBy(xpath = "//label[normalize-space()='Allow all statuses to transition to this one']")
+    private WebElement checkbox;
+
+    @FindBy(xpath = "//label[normalize-space()='Allow all statuses to transition to this one']")
+    private WebElement checkboxSidebar;
 
     public void clickAdministration() {
         administration.click();
@@ -92,8 +99,18 @@ public class WorkflowPage extends BasePage{
         statusName.sendKeys(Keys.ENTER);
     }
 
+    public void clickCheckbox() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(checkbox).click().perform();
+    }
+
     public void clickAddStatusSubmit() {
         addStatusSubmit.click();
+    }
+
+    public void clickCheckboxSidebar() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(checkboxSidebar).click().perform();
     }
 
     public void clickAddTransition() {
@@ -101,11 +118,17 @@ public class WorkflowPage extends BasePage{
     }
 
     public void enterTransitionSourceStep(String sourceStep) {
+        transitionSourceStep.sendKeys(Keys.CONTROL + "a");
+        transitionSourceStep.sendKeys("");
         transitionSourceStep.sendKeys(sourceStep);
+        transitionSourceStep.sendKeys(Keys.ENTER);
     }
 
     public void enterTransitionTargetStep(String targetStep) {
+        transitionTargetStep.sendKeys(Keys.CONTROL + "a");
+        transitionTargetStep.sendKeys("");
         transitionTargetStep.sendKeys(targetStep);
+        transitionTargetStep.sendKeys(Keys.ENTER);
     }
 
     public void enterTransitionName(String name) {

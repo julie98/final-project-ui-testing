@@ -36,20 +36,23 @@ public class DashBoardSteps {
         loginPage.enterPassword("12345");
         loginPage.clickLoginButton();
 
-//        dashboardPage.clickDropdownMenu();
-//        dashboardPage.clickCreateProject();
-//        dashboardPage.clickScrumProject();
-//        dashboardPage.clickSelectButton();
-//        dashboardPage.enterProjectName("Test Project123");
-//        dashboardPage.enterProjectKey("TP");
-//        dashboardPage.clickSubmitButton();
+        dashboardPage.clickDropdownMenu();
+        dashboardPage.clickCreateProject();
+        dashboardPage.clickScrumProject();
+        dashboardPage.clickSelectButton();
+        dashboardPage.enterProjectName("Test Project123");
+        dashboardPage.enterProjectKey("TP");
+        dashboardPage.clickSubmitButton();
 
-//        Thread.sleep(2000);
-//        projectPage.clickCreateIssue();
-//        projectPage.enterEpicName("Test Epic123");
-//        projectPage.enterIssueSummary("Test Issuesummary 123");
-//        projectPage.enterIssueDescription("Test Issue Description 123");
-//        projectPage.clickCreateIssueButton();
+        Thread.sleep(2000);
+        projectPage.clickCreateIssue();
+        projectPage.enterEpicName("Test Epic123");
+        projectPage.enterIssueSummary("Test Issuesummary 123");
+        projectPage.enterIssueDescription("Test Issue Description 123");
+        projectPage.clickCreateIssueButton();
+        projectPage.clickIssues();
+
+
 //
 //        Thread.sleep(2000);
 //        createProjectRolePage.clickAdministrationButton();
@@ -71,45 +74,45 @@ public class DashBoardSteps {
 //        projectSettingPage.clickAddButton();
 
 
-        workflowPage.clickAdministration();
-        workflowPage.clickIssues();
-        createProjectRolePage.enterPassword("12345");
-        createProjectRolePage.clickLoginButton();
-        workflowPage.clickWorkflows();
-        workflowPage.clickAddWorkflow();
-        workflowPage.enterWorkflowName("Testwfwithselenium");
-        workflowPage.enterWorkflowDescription("Testwfwithselenium");
-        workflowPage.clickAddWorkflowSubmit();
-        workflowPage.clickAddStatus();
-        workflowPage.enterStatusName("In Progress");
-        Thread.sleep(2000);
-        workflowPage.clickAddStatusSubmit();
-        Thread.sleep(1000);
-        workflowPage.clickAddStatus();
-        workflowPage.enterStatusName("Resolved");
-        Thread.sleep(2000);
-        workflowPage.clickAddStatusSubmit();
-        Thread.sleep(1000);
-        workflowPage.clickAddStatus();
-        workflowPage.enterStatusName("Closed");
-        Thread.sleep(2000);
-        workflowPage.clickAddStatusSubmit();
-        Thread.sleep(5000);
-        workflowPage.clickAddTransition();
-        workflowPage.enterTransitionSourceStep("Open");
-        workflowPage.enterTransitionTargetStep("In Progress");
-        workflowPage.enterTransitionName("Start Progress");
-        workflowPage.clickAddTransitionSubmit();
-        workflowPage.clickAddTransition();
-        workflowPage.enterTransitionSourceStep("In Progress");
-        workflowPage.enterTransitionTargetStep("Resolved");
-        workflowPage.enterTransitionName("Resolve Issue");
-        workflowPage.clickAddTransitionSubmit();
-        workflowPage.clickAddTransition();
-        workflowPage.enterTransitionSourceStep("Resolved");
-        workflowPage.enterTransitionTargetStep("Closed");
-        workflowPage.enterTransitionName("Close Issue");
-        workflowPage.clickAddTransitionSubmit();
+//        workflowPage.clickAdministration();
+//        workflowPage.clickIssues();
+//        createProjectRolePage.enterPassword("12345");
+//        createProjectRolePage.clickLoginButton();
+//        workflowPage.clickWorkflows();
+//        workflowPage.clickAddWorkflow();
+//        workflowPage.enterWorkflowName("Testwfwithselenium");
+//        workflowPage.enterWorkflowDescription("Testwfwithselenium");
+//        workflowPage.clickAddWorkflowSubmit();
+//        workflowPage.clickAddStatus();
+//        workflowPage.enterStatusName("In Progress");
+//        Thread.sleep(2000);
+//        workflowPage.clickAddStatusSubmit();
+//        Thread.sleep(1000);
+//        workflowPage.clickAddStatus();
+//        workflowPage.enterStatusName("Resolved");
+//        Thread.sleep(2000);
+//        workflowPage.clickAddStatusSubmit();
+//        Thread.sleep(1000);
+//        workflowPage.clickAddStatus();
+//        workflowPage.enterStatusName("Closed");
+//        Thread.sleep(2000);
+//        workflowPage.clickAddStatusSubmit();
+//        Thread.sleep(5000);
+//        workflowPage.clickAddTransition();
+//        workflowPage.enterTransitionSourceStep("Open");
+//        workflowPage.enterTransitionTargetStep("In Progress");
+//        workflowPage.enterTransitionName("Start Progress");
+//        workflowPage.clickAddTransitionSubmit();
+//        workflowPage.clickAddTransition();
+//        workflowPage.enterTransitionSourceStep("In Progress");
+//        workflowPage.enterTransitionTargetStep("Resolved");
+//        workflowPage.enterTransitionName("Resolve Issue");
+//        workflowPage.clickAddTransitionSubmit();
+//        workflowPage.clickAddTransition();
+//        workflowPage.enterTransitionSourceStep("Resolved");
+//        workflowPage.enterTransitionTargetStep("Closed");
+//        workflowPage.enterTransitionName("Close Issue");
+//        workflowPage.clickAddTransitionSubmit();
 
 
 

@@ -32,9 +32,20 @@ public class ProjectPage extends BasePage {
     @FindBy(id = "create-issue-submit")
     private WebElement createIssueButton;
 
-    public void clickProjectAvatar() {
+   @FindBy(xpath = "//a[@class='aui-nav-item ' and @data-label='Issues']")
+    private WebElement issues;
 
-    }
+   @FindBy(id = "opsbar-transitions_more")
+    private WebElement issueStatus;
+
+   @FindBy(xpath = "//aui-item-link[@id='action_id_11']//div[@class='transition-label']//div[1]")
+    private WebElement todo;
+
+   @FindBy(xpath = "//aui-item-link[@id='action_id_21']//div[@class='transition-label']//div[1]")
+    private WebElement inProgress;
+
+   @FindBy(xpath = "//aui-item-link[@id='action_id_31']//div[@class='transition-label']//div[1]")
+    private WebElement done;
 
     public void clickCreateIssue() {
         Actions actions = new Actions(driver);
@@ -59,6 +70,25 @@ public class ProjectPage extends BasePage {
         createIssueButton.click();
     }
 
+    public void clickIssues() {
+        issues.click();
+    }
+
+    public void clickIssueStatus() {
+        issueStatus.click();
+    }
+
+    public void clickTodo() {
+        todo.click();
+    }
+
+    public void clickInProgress() {
+        inProgress.click();
+    }
+
+    public void clickDone() {
+        done.click();
+    }
 
 
 

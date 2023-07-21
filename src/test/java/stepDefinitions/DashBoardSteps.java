@@ -16,10 +16,9 @@ public class DashBoardSteps {
     private DashboardPage dashboardPage;
     private LoginPage loginPage;
     private ProjectPage projectPage;
-
     private ProjectSettingPage projectSettingPage;
-
     private CreateProjectRolePage createProjectRolePage;
+    private WorkflowPage workflowPage;
     private String projectName = "Test Project123";
 
     public DashBoardSteps() {
@@ -28,6 +27,7 @@ public class DashBoardSteps {
         projectPage = new ProjectPage();
         createProjectRolePage = new CreateProjectRolePage();
         projectSettingPage = new ProjectSettingPage();
+        workflowPage = new WorkflowPage();
     }
     @Test
     public void iVisitTheLoginPage() throws InterruptedException {
@@ -36,38 +36,83 @@ public class DashBoardSteps {
         loginPage.enterPassword("12345");
         loginPage.clickLoginButton();
 
-        dashboardPage.clickDropdownMenu();
-        dashboardPage.clickCreateProject();
-        dashboardPage.clickScrumProject();
-        dashboardPage.clickSelectButton();
-        dashboardPage.enterProjectName("Test Project123");
-        dashboardPage.enterProjectKey("TP");
-        dashboardPage.clickSubmitButton();
+//        dashboardPage.clickDropdownMenu();
+//        dashboardPage.clickCreateProject();
+//        dashboardPage.clickScrumProject();
+//        dashboardPage.clickSelectButton();
+//        dashboardPage.enterProjectName("Test Project123");
+//        dashboardPage.enterProjectKey("TP");
+//        dashboardPage.clickSubmitButton();
+
+//        Thread.sleep(2000);
+//        projectPage.clickCreateIssue();
+//        projectPage.enterEpicName("Test Epic123");
+//        projectPage.enterIssueSummary("Test Issuesummary 123");
+//        projectPage.enterIssueDescription("Test Issue Description 123");
+//        projectPage.clickCreateIssueButton();
+//
+//        Thread.sleep(2000);
+//        createProjectRolePage.clickAdministrationButton();
+//        createProjectRolePage.clickSystemButton();
+//        createProjectRolePage.enterPassword("12345");
+//        createProjectRolePage.clickLoginButton();
+//        createProjectRolePage.clickProjectRoleBrowser();
+//        createProjectRolePage.enterRoleName("Test Role in selenium");
+//        createProjectRolePage.enterRoleDescription("Test Role Description in selenium");
+//        createProjectRolePage.clickRoleSubmitButton();
+//        createProjectRolePage.clickReturnProjectButton();
 
         Thread.sleep(2000);
-        projectPage.clickCreateIssue();
-        projectPage.enterEpicName("Test Epic123");
-        projectPage.enterIssueSummary("Test Issuesummary 123");
-        projectPage.enterIssueDescription("Test Issue Description 123");
-        projectPage.clickCreateIssueButton();
+//        projectSettingPage.clickProjectRole();
+//        projectSettingPage.clickAddUserToRole();
+//        projectSettingPage.clickSearchUser("charlie");
+//        Thread.sleep(5000);
+//        projectSettingPage.clickChooseRole("Fullstack");
+//        projectSettingPage.clickAddButton();
 
-        Thread.sleep(2000);
-        createProjectRolePage.clickAdministrationButton();
-        createProjectRolePage.clickSystemButton();
+
+        workflowPage.clickAdministration();
+        workflowPage.clickIssues();
         createProjectRolePage.enterPassword("12345");
         createProjectRolePage.clickLoginButton();
-        createProjectRolePage.clickProjectRoleBrowser();
-        createProjectRolePage.enterRoleName("Test Role in selenium");
-        createProjectRolePage.enterRoleDescription("Test Role Description in selenium");
-        createProjectRolePage.clickRoleSubmitButton();
-        createProjectRolePage.clickReturnProjectButton();
-
+        workflowPage.clickWorkflows();
+        workflowPage.clickAddWorkflow();
+        workflowPage.enterWorkflowName("Testwfwithselenium");
+        workflowPage.enterWorkflowDescription("Testwfwithselenium");
+        workflowPage.clickAddWorkflowSubmit();
+        workflowPage.clickAddStatus();
+        workflowPage.enterStatusName("In Progress");
         Thread.sleep(2000);
-        projectSettingPage.clickProjectRole();
-        projectSettingPage.clickAddUserToRole();
-        projectSettingPage.clickSearchUser("charlie");
-        projectSettingPage.clickChooseRole("Fullstack");
-        projectSettingPage.clickAddButton();
+        workflowPage.clickAddStatusSubmit();
+        Thread.sleep(1000);
+        workflowPage.clickAddStatus();
+        workflowPage.enterStatusName("Resolved");
+        Thread.sleep(2000);
+        workflowPage.clickAddStatusSubmit();
+        Thread.sleep(1000);
+        workflowPage.clickAddStatus();
+        workflowPage.enterStatusName("Closed");
+        Thread.sleep(2000);
+        workflowPage.clickAddStatusSubmit();
+        Thread.sleep(5000);
+        workflowPage.clickAddTransition();
+        workflowPage.enterTransitionSourceStep("Open");
+        workflowPage.enterTransitionTargetStep("In Progress");
+        workflowPage.enterTransitionName("Start Progress");
+        workflowPage.clickAddTransitionSubmit();
+        workflowPage.clickAddTransition();
+        workflowPage.enterTransitionSourceStep("In Progress");
+        workflowPage.enterTransitionTargetStep("Resolved");
+        workflowPage.enterTransitionName("Resolve Issue");
+        workflowPage.clickAddTransitionSubmit();
+        workflowPage.clickAddTransition();
+        workflowPage.enterTransitionSourceStep("Resolved");
+        workflowPage.enterTransitionTargetStep("Closed");
+        workflowPage.enterTransitionName("Close Issue");
+        workflowPage.clickAddTransitionSubmit();
+
+
+
 
 
 

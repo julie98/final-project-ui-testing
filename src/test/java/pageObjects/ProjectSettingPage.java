@@ -10,6 +10,8 @@ public class ProjectSettingPage extends BasePage{
 
     public WebDriver driver = getDriver();
 
+    public Actions actions = new Actions(driver);
+
     @FindBy(xpath = "//a[@class='aui-button aui-button-subtle aui-sidebar-settings-button']")
     private WebElement projectSetting;
 
@@ -41,13 +43,11 @@ public class ProjectSettingPage extends BasePage{
     }
 
     public void clickSearchUser(String username) {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(searchUser).click().sendKeys(username, Keys.ENTER).perform();
+        actions.moveToElement(searchUser).click().sendKeys(username).perform();
     }
 
     public void clickChooseRole(String roleName) {
-        Actions actions1 = new Actions(driver);
-        actions1.moveToElement(chooseRole).click().sendKeys(roleName, Keys.ENTER).perform();
+        actions.moveToElement(chooseRole).click().sendKeys(roleName).perform();
     }
 
     public void clickAddButton() {

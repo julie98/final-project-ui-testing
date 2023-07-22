@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0afe80-fa09-4335-870d-4a17146f4227" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BoardPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SprintPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowSchemePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/AllSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/BoardSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ProjectIssueStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ProjectManageSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/WorkflowSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/project.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/CreateProjectRolePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/CreateProjectRolePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ProjectPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -40,11 +55,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/BeaconfireTraining material/Finalproject/final-project-ui-testing&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/BeaconfireTraining material/FinalProjectUISprint/final-project-ui-testing&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,8 +74,8 @@
       <recent name="$PROJECT_DIR$/src/test/java/stepDefinitions" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DashBoardSteps.iVisitTheLoginPage">
-    <configuration name="DashBoardSteps" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AllSteps.iVisitTheLoginPage">
+    <configuration name="AllSteps" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-ui" />
       <extension name="coverage">
         <pattern>
@@ -68,7 +84,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="stepDefinitions.DashBoardSteps" />
+      <option name="MAIN_CLASS_NAME" value="stepDefinitions.AllSteps" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -76,7 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DashBoardSteps.iVisitTheLoginPage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AllSteps.iVisitTheLoginPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-ui" />
       <extension name="coverage">
         <pattern>
@@ -85,7 +101,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="stepDefinitions.DashBoardSteps" />
+      <option name="MAIN_CLASS_NAME" value="stepDefinitions.AllSteps" />
       <option name="METHOD_NAME" value="iVisitTheLoginPage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -118,11 +134,19 @@
       <option name="workingDirectory" />
       <method v="2" />
     </configuration>
+    <configuration name="Scenario: " type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/src/test/resources/features/project.feature" />
+      <option name="myNameFilter" value="^$" />
+      <option name="cucumberJsArguments" value="" />
+      <option name="workingDirectory" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DashBoardSteps.iVisitTheLoginPage" />
-        <item itemvalue="TestNG.DashBoardSteps" />
+        <item itemvalue="TestNG.AllSteps.iVisitTheLoginPage" />
         <item itemvalue="TestNG.TestRunner" />
+        <item itemvalue="Cucumber.js.Scenario: " />
+        <item itemvalue="TestNG.AllSteps" />
         <item itemvalue="Cucumber.js.Login.feature" />
       </list>
     </recent_temporary>
@@ -140,27 +164,13 @@
       <workItem from="1689892141253" duration="2541000" />
       <workItem from="1689903578059" duration="3650000" />
       <workItem from="1689907246653" duration="10391000" />
-      <workItem from="1689952439767" duration="7095000" />
+      <workItem from="1689952439767" duration="7237000" />
+      <workItem from="1689962432520" duration="2631000" />
+      <workItem from="1689986569782" duration="18712000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

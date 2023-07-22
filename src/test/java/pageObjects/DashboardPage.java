@@ -33,6 +33,9 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//button[normalize-space()='Submit']")
     private WebElement submitButton;
 
+    @FindBy(xpath = "//span[@id='ghx-board-name']")
+    private WebElement boardName;
+
     public void clickDropdownMenu() {
         dropdownMenu.click();
     }
@@ -64,5 +67,9 @@ public class DashboardPage extends BasePage{
 
     public void clickSubmitButton() {
         submitButton.click();
+    }
+
+    public String getBoardName() {
+        return boardName.getText();
     }
 }

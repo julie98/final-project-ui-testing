@@ -10,7 +10,7 @@ public class WorkflowPage extends BasePage{
 
     public WebDriver driver = getDriver();
 
-    @FindBy(xpath = "//span[normalize-space()='Administration']")
+    @FindBy(xpath = "//span[@class='aui-icon aui-icon-small aui-iconfont-configure']")
     private WebElement administration;
 
     @FindBy(id = "admin_issues_menu")

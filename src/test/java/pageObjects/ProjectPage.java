@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -47,6 +48,18 @@ public class ProjectPage extends BasePage {
    @FindBy(xpath = "//aui-item-link[@id='action_id_31']//div[@class='transition-label']//div[1]")
     private WebElement done;
 
+   @FindBy(xpath = "//input[@id='issuetype-field']")
+    private WebElement issueType;
+
+   @FindBy(xpath = "//a[@id='admin_main_proj_link_lnk']")
+    private WebElement currentProject;
+
+   public void setIssueType(String type) {
+       issueType.sendKeys(Keys.CONTROL + "a");
+       issueType.sendKeys("");
+       issueType.sendKeys(type);
+       issueType.sendKeys(Keys.ENTER);
+   }
     public void clickCreateIssue() {
         Actions actions = new Actions(driver);
         actions.moveToElement(createIssue).click().perform();
@@ -88,6 +101,10 @@ public class ProjectPage extends BasePage {
 
     public void clickDone() {
         done.click();
+    }
+
+    public void clickCurrentProject() {
+        currentProject.click();
     }
 
 

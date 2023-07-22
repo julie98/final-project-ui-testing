@@ -9,6 +9,7 @@ public class CreateProjectRolePage extends BasePage {
 
 
 
+
     @FindBy(xpath = "//span[normalize-space()='Administration']")
     private WebElement administrationButton;
 

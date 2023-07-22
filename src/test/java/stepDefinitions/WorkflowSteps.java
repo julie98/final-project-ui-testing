@@ -3,6 +3,8 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.CreateProjectRolePage;
 import pageObjects.ProjectPage;
 import pageObjects.WorkflowPage;
@@ -16,6 +18,8 @@ public class WorkflowSteps {
     private CreateProjectRolePage createProjectRolePage;
 
     private WorkflowSchemePage workflowSchemePage;
+
+    private WebDriverWait wait;
 
     public WorkflowSteps() {
         workflowPage = new WorkflowPage();
@@ -70,6 +74,7 @@ public class WorkflowSteps {
         workflowPage.clickCheckboxSidebar();
         Thread.sleep(1000);
         workflowPage.clickAddStatus();
+        Thread.sleep(1000);
         workflowPage.enterStatusName("Closed");
         Thread.sleep(2000);
         workflowPage.clickAddStatusSubmit();
@@ -104,6 +109,7 @@ public class WorkflowSteps {
     @When("I click the workflow scheme button")
     public void iClickTheWorkflowSchemeButton() {
         workflowSchemePage.clickWorkflowSchemes();
+
     }
 
     @Then("I should able to assign created workflow to the project")

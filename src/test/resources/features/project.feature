@@ -20,6 +20,8 @@ Feature: Project Management with workflow
     Then I should able to create new board
     And I should able to create new sprint
     And I can see the active sprint I can switch issue in the column
+    When I click issue icon
+    Then I should able to change issue status
 
 
 

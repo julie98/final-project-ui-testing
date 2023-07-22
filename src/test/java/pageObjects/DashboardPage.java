@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -63,6 +64,7 @@ public class DashboardPage extends BasePage{
 
     public void enterProjectLead(String lead) {
         projectLead.sendKeys(lead);
+        projectLead.sendKeys(Keys.ENTER);
     }
 
     public void clickSubmitButton() {

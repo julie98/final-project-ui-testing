@@ -21,7 +21,7 @@ public class ProjectIssueStep {
         projectPage.setIssueType("Epic");
         projectPage.enterEpicName("My Epic");
         projectPage.enterIssueSummary("First Epic");
-        projectPage.enterIssueDescription("First Epic description");
+        //projectPage.enterIssueDescription("First Epic description");
         projectPage.clickCreateIssueButton();
     }
 
@@ -30,7 +30,8 @@ public class ProjectIssueStep {
         Thread.sleep(2000);
         projectPage.clickCreateIssue();
         projectPage.setIssueType("Story");
-        projectPage.enterIssueSummary("My first story");
+        Thread.sleep(5000);
+        projectPage.enterIssueSummaryForStory("First Story");
         projectPage.clickCreateIssueButton();
     }
 

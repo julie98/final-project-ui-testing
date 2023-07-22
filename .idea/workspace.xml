@@ -5,22 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0afe80-fa09-4335-870d-4a17146f4227" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BoardPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SprintPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowSchemePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/AllSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/BoardSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ProjectIssueStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ProjectManageSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/WorkflowSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/project.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/CreateProjectRolePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/CreateProjectRolePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BoardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BoardPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/DashboardPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ProjectPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowSchemePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/WorkflowSchemePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/AllSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/AllSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/BoardSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/BoardSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/DashBoardSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/ProjectIssueStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ProjectIssueStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/WorkflowSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/WorkflowSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/login.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +69,7 @@
       <recent name="$PROJECT_DIR$/src/test/java/stepDefinitions" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AllSteps.iVisitTheLoginPage">
+  <component name="RunManager" selected="TestNG.TestRunner">
     <configuration name="AllSteps" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-ui" />
       <extension name="coverage">
@@ -143,8 +138,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AllSteps.iVisitTheLoginPage" />
         <item itemvalue="TestNG.TestRunner" />
+        <item itemvalue="TestNG.AllSteps.iVisitTheLoginPage" />
         <item itemvalue="Cucumber.js.Scenario: " />
         <item itemvalue="TestNG.AllSteps" />
         <item itemvalue="Cucumber.js.Login.feature" />
@@ -167,6 +162,9 @@
       <workItem from="1689952439767" duration="7237000" />
       <workItem from="1689962432520" duration="2631000" />
       <workItem from="1689986569782" duration="18712000" />
+      <workItem from="1690010262086" duration="1789000" />
+      <workItem from="1690014532928" duration="1832000" />
+      <workItem from="1690034097409" duration="15864000" />
     </task>
     <servers />
   </component>

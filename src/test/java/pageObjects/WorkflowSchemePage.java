@@ -1,15 +1,19 @@
 package pageObjects;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WorkflowSchemePage extends BasePage{
 
     private WebDriver driver = getDriver();
+    private WebDriverWait wait = new WebDriverWait(driver, 10);
 
-    @FindBy(xpath = "//a[@id='workflow_schemes']")
+    @FindBy(id = "workflow_schemes")
     private WebElement workflowSchemes;
 
     @FindBy(xpath = "//button[@id='add-workflow-dropdown-trigger']")
@@ -35,11 +39,19 @@ public class WorkflowSchemePage extends BasePage{
 
 
     public void clickWorkflowSchemes() {
-        workflowSchemes.click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(workflowSchemes));
+            workflowSchemes.click();
+            Alert alert = driver.switchTo().alert();
+            alert.accept();
+        } catch (Exception e) {
+            wait.until(ExpectedConditions.elementToBeClickable(workflowSchemes));
+            workflowSchemes.click();
+        }
     }
 
     public void clickEditWorkflowScheme(String projectName) {
-        this.driver.findElement(By.xpath("//td[contains(.,'" + projectName + "')]/following-sibling::td[contains(@class, 'workflow-scheme-operations')]/ul/li[1]/a"))
+        this.driver.findElement(By.xpath("(//td[contains(.,'" + projectName + "')]/following-sibling::td[contains(@class, 'workflow-scheme-operations')]/ul/li[1]/a)[1]"))
                 .click();
     }
 

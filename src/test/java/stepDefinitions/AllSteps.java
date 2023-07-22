@@ -2,11 +2,14 @@ package stepDefinitions;
 
 import constants.URL;
 import drivers.DriverFactory;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
-public class AllSteps {
+public class AllSteps{
     private WebDriver driver = DriverFactory.getDriver();
     private DashboardPage dashboardPage;
     private LoginPage loginPage;
@@ -19,7 +22,7 @@ public class AllSteps {
     private BoardPage boardPage;
 
     private SprintPage sprintPage;
-    private String projectName = "Test";
+    private String projectName = "QWER";
 
     public AllSteps() {
         dashboardPage = new DashboardPage();
@@ -34,18 +37,19 @@ public class AllSteps {
     }
     @Test
     public void iVisitTheLoginPage() throws InterruptedException {
-        DriverFactory.getDriver().navigate().to(URL.Login.toString());;
+        DriverFactory.getDriver().navigate().to(URL.Login.toString());
         loginPage.enterUsername("admin");
         loginPage.enterPassword("12345");
         loginPage.clickLoginButton();
 
-        dashboardPage.clickDropdownMenu();
-        dashboardPage.clickCreateProject();
-        dashboardPage.clickScrumProject();
-        dashboardPage.clickSelectButton();
-        dashboardPage.enterProjectName(projectName);
-        //dashboardPage.enterProjectKey("SP1");
-        dashboardPage.clickSubmitButton();
+//        dashboardPage.clickDropdownMenu();
+//        dashboardPage.clickCreateProject();
+//        dashboardPage.clickScrumProject();
+//        dashboardPage.clickSelectButton();
+//        dashboardPage.enterProjectName(projectName);
+//        //dashboardPage.enterProjectKey("SP1");
+//        dashboardPage.clickSubmitButton();
+//        Thread.sleep(2000);
 
         //        createProjectRolePage.clickAdministrationButton();
 //        createProjectRolePage.clickSystemButton();
@@ -82,7 +86,7 @@ public class AllSteps {
         createProjectRolePage.clickLoginButton();
         workflowPage.clickWorkflows();
         workflowPage.clickAddWorkflow();
-        workflowPage.enterWorkflowName("Testwfwithselenium");
+        workflowPage.enterWorkflowName("111222");
         workflowPage.enterWorkflowDescription("Testwfwithselenium");
         workflowPage.clickAddWorkflowSubmit();
         workflowPage.clickAddStatus();
@@ -100,12 +104,13 @@ public class AllSteps {
         workflowPage.clickCheckboxSidebar();
         Thread.sleep(1000);
         workflowPage.clickAddStatus();
+        Thread.sleep(1000);
         workflowPage.enterStatusName("Closed");
         Thread.sleep(2000);
         workflowPage.clickAddStatusSubmit();
         Thread.sleep(1000);
-
-
+//
+//
         workflowPage.clickAddTransition();
         workflowPage.enterTransitionSourceStep("Open");
         Thread.sleep(2000);
@@ -127,21 +132,22 @@ public class AllSteps {
         Thread.sleep(2000);
         workflowPage.enterTransitionName("Close Issue");
         workflowPage.clickAddTransitionSubmit();
-
+//
+//        workflowPage.clickReturnProjectButton();
 //        workflowPage.clickAdministration();
 //        workflowPage.clickIssues();
 //        createProjectRolePage.enterPassword("12345");
 //        createProjectRolePage.clickLoginButton();
-//        workflowSchemePage.clickWorkflowSchemes();
-//        workflowSchemePage.clickEditWorkflowScheme(projectName);
-//        workflowSchemePage.clickAddWorkflowScheme();
-//        workflowSchemePage.clickAssignWorkflowScheme();
-//        workflowSchemePage.pickWorkflowScheme("Testwfwithselenium");
-//        workflowSchemePage.clickNextButton();
-//        workflowSchemePage.clickSelectAllIssueTypes();
-//        workflowSchemePage.clickSubmitButton();
-//        workflowSchemePage.clickPublishDraft();
-//        workflowSchemePage.clickSubmitWorkflowAssociate();
+        workflowSchemePage.clickWorkflowSchemes();
+        workflowSchemePage.clickEditWorkflowScheme("My Project");
+        workflowSchemePage.clickAddWorkflowScheme();
+        workflowSchemePage.clickAssignWorkflowScheme();
+        workflowSchemePage.pickWorkflowScheme("111222");
+        workflowSchemePage.clickNextButton();
+        workflowSchemePage.clickSelectAllIssueTypes();
+        workflowSchemePage.clickSubmitButton();
+        workflowSchemePage.clickPublishDraft();
+        workflowSchemePage.clickSubmitWorkflowAssociate();
 
 //        Thread.sleep(2000);
 //        projectPage.clickCreateIssue();
@@ -165,8 +171,7 @@ public class AllSteps {
 
         //        Thread.sleep(2000);
 
-
-
+        //explicit wait
 
 
 

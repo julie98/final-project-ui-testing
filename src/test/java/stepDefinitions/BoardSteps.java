@@ -32,8 +32,8 @@ public class BoardSteps {
        boardPage.clickBoardToolsButton();
        boardPage.clickCreateBoardButton();
        boardPage.clickScrumButton();
-       boardPage.clickBoardNextButton();
        boardPage.clickExistingProjectButton();
+       boardPage.clickBoardNextButton();
        boardPage.enterBoardName("My Board");
        boardPage.clickCreateBoard();
     }
@@ -55,6 +55,7 @@ public class BoardSteps {
     public void activeSprintBoard() throws InterruptedException {
         Thread.sleep(2000);
         boardPage.moveIssueToInProgress();
+        Thread.sleep(5000);
         boardPage.moveIssueToDone();
     }
 

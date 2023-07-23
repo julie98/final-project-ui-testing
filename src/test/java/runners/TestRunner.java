@@ -11,6 +11,7 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = "classpath:features",
+//        features = "src/test/resources/features/group.feature",
         glue = "classpath:stepDefinitions"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

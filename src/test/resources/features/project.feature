@@ -22,6 +22,8 @@ Feature: Project Management with workflow
     And I can see the active sprint I can switch issue in the column
     When I click issue icon
     Then I should able to change issue status
+    When I click project setting button
+    Then I should able to assign role to the project
 
 
 

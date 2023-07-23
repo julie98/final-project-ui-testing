@@ -49,6 +49,7 @@ public class BoardSteps {
         sprintPage.moveIssueToContainer();
         sprintPage.clickStartSprintButton();
         sprintPage.clickStartButton();
+        Thread.sleep(10000);
     }
 
     @And("I can see the active sprint I can switch issue in the column")

@@ -5,14 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProjectSettingPage extends BasePage{
 
     public WebDriver driver = getDriver();
 
-    public Actions actions = new Actions(driver);
+    public WebDriverWait wait = new WebDriverWait(driver, 10);
 
-    @FindBy(xpath = "//a[@class='aui-button aui-button-subtle aui-sidebar-settings-button']")
+
+    @FindBy(css = ".aui-button.aui-button-subtle.aui-sidebar-settings-button")
     private WebElement projectSetting;
 
     @FindBy(id = "view_project_roles")
@@ -21,13 +24,13 @@ public class ProjectSettingPage extends BasePage{
     @FindBy(xpath = "//span[contains(text(),'Add users to a role')]")
     private WebElement addUserToRole;
 
-    @FindBy(xpath = "//div[contains(text(),'Search by name or email')]")
+    @FindBy(css = "div[class='multi-select css-2b097c-container'] div[class=' css-ypi1dq-placeholder']")
     private WebElement searchUser;
 
-    @FindBy(xpath = "//div[contains(text(),'Choose a role')]")
+    @FindBy(css = "div[class=' css-2b097c-container'] div[class=' css-ypi1dq-placeholder']")
     private WebElement chooseRole;
 
-    @FindBy(xpath = "//span[@class='css-t5emrf'][normalize-space()='Add']")
+    @FindBy(css = "button[type='submit'] span[class='css-t5emrf']")
     private WebElement addButton;
 
     public void clickProjectSetting() {
@@ -43,11 +46,18 @@ public class ProjectSettingPage extends BasePage{
     }
 
     public void clickSearchUser(String username) {
-        actions.moveToElement(searchUser).click().sendKeys(username).perform();
+        wait.until(ExpectedConditions.elementToBeClickable(searchUser));
+       Actions actions = new Actions(driver);
+        actions.moveToElement(searchUser).click().sendKeys(username ,Keys.ARROW_DOWN, Keys.ENTER).perform();
     }
 
     public void clickChooseRole(String roleName) {
-        actions.moveToElement(chooseRole).click().sendKeys(roleName).perform();
+        wait.until(ExpectedConditions.elementToBeClickable(chooseRole));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(chooseRole).click().sendKeys(roleName ,Keys.ARROW_DOWN, Keys.ENTER).perform();
+//        actions.moveToElement(chooseRole).click().perform();
+//        searchUser.sendKeys(roleName);
+//        searchUser.sendKeys(Keys.ENTER);
     }
 
     public void clickAddButton() {

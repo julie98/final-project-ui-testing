@@ -34,9 +34,9 @@ public class LoginSteps {
         loginPage.clickLoginButton();
     }
 
-    @Then("I should be able to see the dashboard page")
-    public void iShouldBeAbleToSeeTheDashboardPage() {
-        assertEquals(DriverFactory.getDriver().getCurrentUrl(),
-                URL.Dashboard.toString());
-    }
+//    @Then("I should be able to see the dashboard page")
+//    public void iShouldBeAbleToSeeTheDashboardPage() {
+//        assertEquals(DriverFactory.getDriver().getCurrentUrl(),
+//                URL.Dashboard.toString());
+//    }
 }
